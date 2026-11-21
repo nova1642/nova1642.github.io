@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>白虎_原创影像品牌,记录真实力量与东方美学</title>
+<meta name="description" content="白虎官方网站，原创视频品牌与企业级内容平台，深耕东方美学与真实故事影像，为创作者搭建值得信赖的高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f2a'/%3E%3Cpath d='M14 20c6 0 8 4 8 8v14c0-4 3-6 10-6s10 2 10 6V28c0-4 2-8 8-8' fill='none' stroke='%23ffb347' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='27' r='3' fill='%23ffb347'/%3E%3Ccircle cx='40' cy='27' r='3' fill='%23ffb347'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bh-ink:#151922;
+  --bh-ink-2:#1e2532;
+  --bh-card:#232b3a;
+  --bh-line:rgba(255,255,255,.09);
+  --bh-amber:#ffb347;
+  --bh-amber-2:#ff8a3d;
+  --bh-teal:#4fd6c4;
+  --bh-txt:#e9edf4;
+  --bh-sub:#a3adc0;
+  --bh-radius:16px;
+  --bh-shadow:0 18px 40px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bh-ink);
+  color:var(--bh-txt);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit}
+.bh-wrap{width:min(1200px,92vw);margin:0 auto}
+.bh-sticky{position:sticky;top:0;z-index:60}
+
+/* 公告条 */
+.bh-notice{
+  background:linear-gradient(90deg,#2a1f14,#3a2614 55%,#241a12);
+  border-bottom:1px solid rgba(255,179,71,.22);
+  font-size:13px;
+}
+.bh-notice .bh-wrap{
+  display:flex;align-items:center;gap:12px;
+  padding:9px 0;overflow:hidden;white-space:nowrap;
+}
+.bh-notice-tag{
+  flex:none;background:var(--bh-amber);color:#20160a;
+  font-weight:700;font-size:11px;letter-spacing:.12em;
+  padding:2px 9px;border-radius:99px;
+}
+.bh-notice-list{display:flex;gap:34px;color:#e7d6c2;animation:bh-marquee 26s linear infinite}
+.bh-notice-list span{white-space:nowrap}
+.bh-notice-list b{color:var(--bh-amber);font-weight:600}
+@keyframes bh-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.bh-notice-list{animation:none}}
+
+/* 页头 */
+.bh-header{
+  background:rgba(21,25,34,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--bh-line);
+}
+.bh-header .bh-wrap{display:flex;align-items:center;gap:22px;padding:14px 0}
+.bh-logo{display:flex;align-items:center;gap:11px;flex:none}
+.bh-logo-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(140deg,#2b3346,#1a1f2b);
+  border:1px solid rgba(255,179,71,.35);
+  display:grid;place-items:center;flex:none;
+}
+.bh-logo-mark svg{width:26px;height:26px}
+.bh-logo-txt strong{display:block;font-size:18px;letter-spacing:.14em;line-height:1.2}
+.bh-logo-txt small{display:block;font-size:10px;letter-spacing:.28em;color:var(--bh-sub)}
+.bh-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap}
+.bh-nav a{
+  font-size:14px;color:var(--bh-sub);padding:7px 12px;border-radius:9px;
+  transition:.2s;
+}
+.bh-nav a:hover{color:var(--bh-txt);background:rgba(255,255,255,.06)}
+.bh-head-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.bh-search{position:relative}
+.bh-search input{
+  width:216px;background:#1c2330;border:1px solid var(--bh-line);
+  border-radius:99px;padding:9px 38px 9px 16px;color:var(--bh-txt);
+  font-size:13px;outline:none;transition:.25s;
+}
+.bh-search input:focus{border-color:var(--bh-amber);width:246px;background:#202838}
+.bh-search input::placeholder{color:#6c778c}
+.bh-search-btn{
+  position:absolute;right:5px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  color:var(--bh-amber);font-size:14px;
+}
+.bh-search-feedback{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;
+  background:#222a38;border:1px solid var(--bh-line);border-radius:12px;
+  padding:10px 14px;font-size:12.5px;color:var(--bh-sub);
+  box-shadow:var(--bh-shadow);display:none;line-height:1.6;
+}
+.bh-search-feedback.show{display:block}
+.bh-search-feedback b{color:var(--bh-amber)}
+.bh-btn-ghost{
+  border:1px solid rgba(255,179,71,.45);color:var(--bh-amber);
+  padding:8px 16px;border-radius:99px;font-size:13px;font-weight:600;
+  transition:.22s;white-space:nowrap;
+}
+.bh-btn-ghost:hover{background:var(--bh-amber);color:#1a1409}
+.bh-burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--bh-line);font-size:17px}
+@media (max-width:1000px){
+  .bh-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#1a202c;border-bottom:1px solid var(--bh-line);
+    padding:10px 4vw 16px;flex-direction:column;gap:2px;
+  }
+  .bh-nav.open{display:flex}
+  .bh-nav a{padding:11px 12px;font-size:15px}
+  .bh-burger{display:grid;place-items:center}
+  .bh-search input{width:150px}
+  .bh-search input:focus{width:170px}
+  .bh-btn-ghost{display:none}
+}
+
+/* 首屏 */
+.bh-hero{position:relative;padding:64px 0 72px;overflow:hidden}
+.bh-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(760px 380px at 82% 8%,rgba(255,138,61,.16),transparent 65%),
+    radial-gradient(620px 420px at 6% 92%,rgba(79,214,196,.11),transparent 62%);
+  pointer-events:none;
+}
+.bh-hero-grid{
+  position:relative;display:grid;grid-template-columns:1.02fr .98fr;
+  gap:52px;align-items:center;
+}
+.bh-kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12px;letter-spacing:.18em;color:var(--bh-amber);
+  border:1px solid rgba(255,179,71,.35);border-radius:99px;
+  padding:5px 14px;margin-bottom:20px;
+}
+.bh-kicker i{width:6px;height:6px;border-radius:50%;background:var(--bh-amber);display:block}
+.bh-hero h1{
+  font-size:clamp(40px,5.6vw,66px);line-height:1.06;letter-spacing:.08em;
+  font-weight:800;margin-bottom:10px;
+}
+.bh-hero h1 span{
+  background:linear-gradient(100deg,var(--bh-amber),#ffd79a 60%,var(--bh-teal));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.bh-hero-lead{
+  font-size:16px;color:#c9d2e2;max-width:520px;margin:14px 0 22px;
+  border-left:2px solid var(--bh-amber);padding-left:16px;
+}
+.bh-hero-lead b{color:var(--bh-amber)}
+.bh-hero-desc{font-size:14.5px;color:var(--bh-sub);max-width:540px;margin-bottom:26px}
+.bh-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.bh-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:99px;font-size:14px;font-weight:600;
+  transition:.22s;border:1px solid transparent;
+}
+.bh-btn-primary{background:linear-gradient(100deg,var(--bh-amber),var(--bh-amber-2));color:#1d1408;box-shadow:0 10px 26px rgba(255,138,61,.28)}
+.bh-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(255,138,61,.4)}
+.bh-btn-line{border-color:var(--bh-line);color:var(--bh-txt);background:rgba(255,255,255,.03)}
+.bh-btn-line:hover{border-color:var(--bh-amber);color:var(--bh-amber)}
+.bh-hero-stats{display:flex;gap:38px;flex-wrap:wrap}
+.bh-hero-stats div strong{
+  display:block;font-size:27px;font-weight:800;color:var(--bh-amber);line-height:1.2;
+  font-variant-numeric:tabular-nums;
+}
+.bh-hero-stats div span{font-size:12.5px;color:var(--bh-sub);letter-spacing:.05em}
+.bh-hero-visual{position:relative}
+.bh-hero-visual .bh-hero-frame{
+  border-radius:22px;overflow:hidden;border:1px solid rgba(255,179,71,.22);
+  box-shadow:0 34px 70px rgba(0,0,0,.5);position:relative;
+}
+.bh-hero-visual img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.bh-hero-badge{
+  position:absolute;left:-18px;bottom:26px;
+  background:#20283a;border:1px solid var(--bh-line);border-radius:14px;
+  padding:12px 18px;box-shadow:var(--bh-shadow);font-size:12.5px;color:var(--bh-sub);
+}
+.bh-hero-badge strong{display:block;color:var(--bh-txt);font-size:15px;letter-spacing:.04em}
+.bh-hero-badge em{color:var(--bh-teal);font-style:normal}
+
+/* 通用节 */
+.bh-sec{padding:64px 0;border-top:1px solid var(--bh-line)}
+.bh-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:34px;flex-wrap:wrap}
+.bh-sec-title h2{font-size:clamp(24px,2.6vw,32px);letter-spacing:.06em;line-height:1.3}
+.bh-sec-title p{color:var(--bh-sub);font-size:14px;margin-top:8px;max-width:660px}
+.bh-sec-more{font-size:13px;color:var(--bh-amber);border:1px solid rgba(255,179,71,.35);padding:7px 16px;border-radius:99px;transition:.2s}
+.bh-sec-more:hover{background:var(--bh-amber);color:#1a1409}
+
+/* 深度解析 */
+.bh-about-grid{display:grid;grid-template-columns:.9fr 1.35fr;gap:46px;align-items:start}
+.bh-about-art{
+  border-radius:var(--bh-radius);overflow:hidden;border:1px solid var(--bh-line);
+  position:sticky;top:150px;
+}
+.bh-about-art img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.bh-about-txt h2{font-size:clamp(23px,2.4vw,30px);margin-bottom:16px;letter-spacing:.05em}
+.bh-about-txt h3{font-size:16px;color:var(--bh-amber);margin:26px 0 10px;letter-spacing:.06em}
+.bh-about-txt p{color:#c2cbda;font-size:14.6px;margin-bottom:12px}
+.bh-about-txt p b{color:var(--bh-txt)}
+.bh-quote{
+  border-left:3px solid var(--bh-teal);background:rgba(79,214,196,.06);
+  padding:16px 20px;border-radius:0 12px 12px 0;margin:22px 0;
+  font-size:14.4px;color:#cfe6e2;
+}
+.bh-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.bh-mini{
+  background:var(--bh-card);border:1px solid var(--bh-line);border-radius:12px;
+  padding:14px 16px;font-size:13px;color:var(--bh-sub);
+}
+.bh-mini strong{display:block;color:var(--bh-amber);font-size:15px;margin-bottom:3px}
+@media (max-width:900px){
+  .bh-hero-grid,.bh-about-grid{grid-template-columns:1fr;gap:34px}
+  .bh-about-art{position:static}
+  .bh-about-art img{aspect-ratio:16/9}
+}
+
+/* 焦点内容 */
+.bh-focus-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}
+.bh-img-wrap{position:relative;overflow:hidden;border-radius:var(--bh-radius)}
+.bh-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.bh-img-wrap:hover img{transform:scale(1.05)}
+.bh-cover{aspect-ratio:16/9;position:relative;overflow:hidden;display:block}
+.bh-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.bh-card:hover .bh-cover img{transform:scale(1.05)}
+.bh-cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(21,25,34,0) 35%,rgba(21,25,34,.86));
+}
+.bh-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:54px;height:54px;border-radius:50%;background:rgba(21,25,34,.6);
+  border:1.5px solid rgba(255,179,71,.75);display:grid;place-items:center;z-index:2;
+  transition:.24s;
+}
+.bh-play::after{
+  content:"";border-left:15px solid var(--bh-amber);
+  border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:3px;
+}
+.bh-card:hover .bh-play{background:var(--bh-amber);border-color:var(--bh-amber)}
+.bh-card:hover .bh-play::after{border-left-color:#1a1409}
+.bh-focus-main{
+  background:var(--bh-card);border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.bh-focus-main .bh-cover{aspect-ratio:16/9}
+.bh-focus-body{padding:20px 22px 22px}
+.bh-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.bh-tag{
+  font-size:11.5px;padding:2px 9px;border-radius:99px;
+  background:rgba(255,179,71,.12);color:var(--bh-amber);border:1px solid rgba(255,179,71,.22);
+}
+.bh-tag.teal{background:rgba(79,214,196,.1);color:var(--bh-teal);border-color:rgba(79,214,196,.24)}
+.bh-focus-body h3{font-size:19px;line-height:1.45;margin-bottom:8px}
+.bh-focus-body p{font-size:13.6px;color:var(--bh-sub)}
+.bh-card-meta{
+  display:flex;align-items:center;gap:10px;font-size:12.5px;color:#8b96a9;
+  margin-top:14px;flex-wrap:wrap;
+}
+.bh-card-meta .bh-dot{width:3px;height:3px;border-radius:50%;background:#5a6578}
+.bh-focus-side{display:flex;flex-direction:column;gap:16px}
+.bh-card{
+  background:var(--bh-card);border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  overflow:hidden;transition:transform .25s,border-color .25s;
+}
+.bh-card:hover{transform:translateY(-3px);border-color:rgba(255,179,71,.3)}
+.bh-focus-side .bh-card{display:grid;grid-template-columns:132px 1fr;gap:0}
+.bh-focus-side .bh-cover{aspect-ratio:4/3;height:100%}
+.bh-focus-side .bh-cover::after{background:linear-gradient(90deg,rgba(21,25,34,0),rgba(21,25,34,.4))}
+.bh-focus-side .bh-play{width:36px;height:36px}
+.bh-focus-side .bh-play::after{border-left-width:11px;border-top-width:7px;border-bottom-width:7px}
+.bh-focus-side-body{padding:13px 14px;display:flex;flex-direction:column;justify-content:center}
+.bh-focus-side-body h4{font-size:14px;line-height:1.45;margin-bottom:6px}
+.bh-focus-side-body p{font-size:12px;color:#8b96a9}
+@media (max-width:900px){
+  .bh-focus-grid{grid-template-columns:1fr}
+  .bh-focus-side .bh-card{grid-template-columns:118px 1fr}
+}
+
+/* 视频流 */
+.bh-filter{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px}
+.bh-chip{
+  font-size:13px;padding:6px 16px;border-radius:99px;border:1px solid var(--bh-line);
+  color:var(--bh-sub);transition:.2s;
+}
+.bh-chip:hover{color:var(--bh-txt);border-color:rgba(255,179,71,.4)}
+.bh-chip.active{background:var(--bh-amber);color:#1a1409;border-color:var(--bh-amber);font-weight:600}
+.bh-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bh-flow .bh-card{display:flex;flex-direction:column}
+.bh-flow-body{padding:15px 16px 17px;display:flex;flex-direction:column;flex:1}
+.bh-flow-body h3{font-size:15.5px;line-height:1.5;margin-bottom:7px}
+.bh-flow-body p{font-size:12.8px;color:var(--bh-sub);flex:1}
+.bh-actions{display:flex;align-items:center;gap:14px;margin-top:14px;font-size:12.5px;color:#8b96a9}
+.bh-act{display:inline-flex;align-items:center;gap:5px;transition:.18s;color:#8b96a9}
+.bh-act:hover{color:var(--bh-amber)}
+.bh-act.liked{color:var(--bh-amber-2)}
+.bh-act.faved{color:#ff7ea8}
+.bh-act svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7}
+.bh-act.liked svg,.bh-act.faved svg{fill:currentColor}
+.bh-share{margin-left:auto}
+@media (max-width:980px){.bh-flow{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.bh-flow{grid-template-columns:1fr}}
+
+/* 专题 */
+.bh-special{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bh-special-card{
+  position:relative;border-radius:var(--bh-radius);overflow:hidden;
+  border:1px solid var(--bh-line);min-height:280px;display:flex;align-items:flex-end;
+  transition:transform .28s;
+}
+.bh-special-card:hover{transform:translateY(-4px)}
+.bh-special-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bh-special-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(21,25,34,.1) 20%,rgba(21,25,34,.94));
+}
+.bh-special-body{position:relative;z-index:2;padding:20px}
+.bh-special-body .bh-state{
+  display:inline-block;font-size:11px;padding:2px 9px;border-radius:99px;
+  background:rgba(79,214,196,.15);color:var(--bh-teal);margin-bottom:9px;
+}
+.bh-special-body h3{font-size:17px;margin-bottom:6px}
+.bh-special-body p{font-size:12.7px;color:#b4bdcc}
+@media (max-width:900px){.bh-special{grid-template-columns:1fr}}
+
+/* 创作者 */
+.bh-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.bh-creator{
+  background:var(--bh-card);border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  padding:22px 18px;text-align:center;transition:.25s;
+}
+.bh-creator:hover{transform:translateY(-4px);border-color:rgba(255,179,71,.35)}
+.bh-avatar{
+  width:68px;height:68px;border-radius:50%;margin:0 auto 13px;
+  display:grid;place-items:center;font-size:24px;font-weight:700;
+  border:2px solid rgba(255,179,71,.35);overflow:hidden;position:relative;
+}
+.bh-avatar span{position:relative;z-index:1;color:#1a1409}
+.bh-creator h3{font-size:16px;margin-bottom:4px;letter-spacing:.04em}
+.bh-creator .bh-field{font-size:12px;color:var(--bh-amber);margin-bottom:9px}
+.bh-creator p{font-size:12.5px;color:var(--bh-sub);min-height:60px}
+.bh-creator-data{display:flex;justify-content:center;gap:20px;margin-top:10px;font-size:11.5px;color:#8b96a9}
+.bh-creator-data b{display:block;color:var(--bh-txt);font-size:14px;font-weight:700}
+.bh-creator-btn{
+  margin-top:14px;width:100%;padding:8px;border-radius:99px;
+  border:1px solid rgba(255,179,71,.4);color:var(--bh-amber);font-size:12.5px;transition:.2s;
+}
+.bh-creator-btn:hover{background:var(--bh-amber);color:#1a1409}
+@media (max-width:980px){.bh-creators{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.bh-creators{grid-template-columns:1fr}}
+
+/* 评论 */
+.bh-voices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bh-voice{
+  background:var(--bh-card);border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  padding:20px;display:flex;flex-direction:column;gap:12px;
+}
+.bh-voice-top{display:flex;align-items:center;gap:11px}
+.bh-voice-av{
+  width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:14px;font-weight:700;color:#1a1409;
+}
+.bh-voice-top strong{font-size:13.5px;display:block}
+.bh-voice-top small{font-size:11.5px;color:#8b96a9}
+.bh-voice p{font-size:13.3px;color:#c2cbda;flex:1}
+.bh-stars{color:var(--bh-amber);font-size:12px;letter-spacing:2px}
+@media (max-width:900px){.bh-voices{grid-template-columns:1fr}}
+
+/* 品牌动态 */
+.bh-news{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.bh-news-item{
+  display:flex;gap:16px;background:var(--bh-card);border:1px solid var(--bh-line);
+  border-radius:12px;padding:16px 18px;transition:.22s;
+}
+.bh-news-item:hover{border-color:rgba(79,214,196,.35)}
+.bh-news-date{
+  flex:none;text-align:center;font-size:11px;color:var(--bh-sub);
+  border-right:1px solid var(--bh-line);padding-right:16px;min-width:58px;
+}
+.bh-news-date b{display:block;font-size:20px;color:var(--bh-teal);line-height:1.2}
+.bh-news-item h3{font-size:14.5px;margin-bottom:4px}
+.bh-news-item p{font-size:12.5px;color:var(--bh-sub)}
+@media (max-width:760px){.bh-news{grid-template-columns:1fr}}
+
+/* FAQ */
+.bh-faq{max-width:880px}
+.bh-faq details{
+  background:var(--bh-card);border:1px solid var(--bh-line);
+  border-radius:12px;padding:0 18px;margin-bottom:11px;transition:.2s;
+}
+.bh-faq details[open]{border-color:rgba(255,179,71,.35)}
+.bh-faq summary{
+  list-style:none;cursor:pointer;padding:16px 0;font-size:14.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.bh-faq summary::-webkit-details-marker{display:none}
+.bh-faq summary::after{content:"+";color:var(--bh-amber);font-size:19px;font-weight:400;flex:none}
+.bh-faq details[open] summary::after{content:"−"}
+.bh-faq details p{font-size:13.4px;color:var(--bh-sub);padding-bottom:16px;border-top:1px dashed var(--bh-line);padding-top:12px}
+
+/* 联系 */
+.bh-contact{
+  background:linear-gradient(140deg,#242c3c,#1a202c 70%);
+  border:1px solid var(--bh-line);border-radius:22px;
+  padding:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center;
+}
+.bh-contact h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:12px;letter-spacing:.05em}
+.bh-contact p{color:var(--bh-sub);font-size:14px;margin-bottom:20px}
+.bh-contact-actions{display:flex;flex-wrap:wrap;gap:12px}
+.bh-contact-info{display:flex;flex-direction:column;gap:14px}
+.bh-contact-info div{
+  background:rgba(255,255,255,.04);border:1px solid var(--bh-line);
+  border-radius:12px;padding:13px 16px;font-size:13px;color:var(--bh-sub);
+}
+.bh-contact-info div strong{color:var(--bh-txt);display:block;margin-bottom:2px;font-size:13.5px}
+@media (max-width:860px){.bh-contact{grid-template-columns:1fr;padding:30px 22px}}
+
+/* 页脚 */
+.bh-footer{border-top:1px solid var(--bh-line);padding:52px 0 26px;background:#12161f}
+.bh-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+.bh-footer p{font-size:12.8px;color:#818c9f;margin-top:12px;max-width:320px}
+.bh-footer h4{font-size:13.5px;margin-bottom:13px;letter-spacing:.08em;color:var(--bh-txt)}
+.bh-footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.bh-footer ul a{font-size:12.8px;color:#818c9f;transition:.2s}
+.bh-footer ul a:hover{color:var(--bh-amber)}
+.bh-footer-bottom{
+  border-top:1px solid var(--bh-line);padding-top:20px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12px;color:#6c778c;
+}
+@media (max-width:860px){.bh-footer-grid{grid-template-columns:1fr 1fr;gap:26px}}
+
+/* 回到顶部 */
+.bh-top{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--bh-amber);color:#1a1409;display:grid;place-items:center;
+  font-size:18px;font-weight:700;box-shadow:0 12px 28px rgba(255,138,61,.35);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:55;
+}
+.bh-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+
+/* 弹窗 */
+.bh-modal{
+  position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;
+  background:rgba(8,10,15,.72);backdrop-filter:blur(4px);padding:20px;
+}
+.bh-modal.show{display:flex}
+.bh-modal-box{
+  background:#212938;border:1px solid var(--bh-line);border-radius:18px;
+  width:min(520px,100%);padding:26px 26px 24px;box-shadow:var(--bh-shadow);
+  max-height:86vh;overflow:auto;
+}
+.bh-modal-box h3{font-size:18px;margin-bottom:6px}
+.bh-modal-box>.bh-modal-sub{font-size:12.8px;color:var(--bh-sub);margin-bottom:18px}
+.bh-modal-close{position:sticky;float:right;top:0;font-size:20px;color:#8b96a9;line-height:1}
+.bh-modal-close:hover{color:var(--bh-amber)}
+.bh-form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.bh-form-row label{font-size:12.5px;color:var(--bh-sub)}
+.bh-form-row input,.bh-form-row textarea{
+  background:#1a202c;border:1px solid var(--bh-line);border-radius:10px;
+  padding:10px 13px;color:var(--bh-txt);font-size:13.5px;outline:none;transition:.2s;resize:vertical;
+}
+.bh-form-row input:focus,.bh-form-row textarea:focus{border-color:var(--bh-amber)}
+.bh-share-list{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.bh-share-list button{
+  background:#1a202c;border:1px solid var(--bh-line);border-radius:12px;
+  padding:14px 6px;font-size:12.5px;color:var(--bh-sub);transition:.2s;
+}
+.bh-share-list button:hover{border-color:var(--bh-amber);color:var(--bh-amber)}
+.bh-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
+.bh-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);
+  background:#2b3446;border:1px solid rgba(255,179,71,.35);color:var(--bh-txt);
+  padding:11px 22px;border-radius:99px;font-size:13px;box-shadow:var(--bh-shadow);
+  opacity:0;visibility:hidden;transition:.28s;z-index:120;
+}
+.bh-toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="bh-sticky">
+  <div class="bh-notice" aria-label="最新公告">
+    <div class="bh-wrap">
+      <span class="bh-notice-tag">公告</span>
+      <div class="bh-notice-list">
+        <span><b>11-19</b> 白虎「山影」系列纪录片第 4 集《雪线之下》官方发布</span>
+        <span><b>11-16</b> 冬季创作者扶持计划开放报名，共 60 个扶持名额</span>
+        <span><b>11-12</b> 白虎影像年鉴 2026 上线，收录 128 部精品内容</span>
+        <span><b>11-08</b> 「一城一虎」城市探索挑战赛启动投票</span>
+        <span><b>11-19</b> 白虎「山影」系列纪录片第 4 集《雪线之下》官方发布</span>
+        <span><b>11-16</b> 冬季创作者扶持计划开放报名，共 60 个扶持名额</span>
+        <span><b>11-12</b> 白虎影像年鉴 2026 上线，收录 128 部精品内容</span>
+        <span><b>11-08</b> 「一城一虎」城市探索挑战赛启动投票</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bh-header">
+    <div class="bh-wrap">
+      <a class="bh-logo" href="#bh-home" aria-label="白虎官方网站首页">
+        <span class="bh-logo-mark">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M10 22c6 0 8 4 8 8v12c0-4 3-6 14-6s14 2 14 6V30c0-4 2-8 8-8" fill="none" stroke="#ffb347" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="23" cy="27" r="3.2" fill="#ffb347"/>
+            <circle cx="41" cy="27" r="3.2" fill="#ffb347"/>
+            <path d="M28 40h8" stroke="#4fd6c4" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="bh-logo-txt">
+          <strong>白虎</strong>
+          <small>BAIHU VIDEO</small>
+        </span>
+      </a>
+      <nav class="bh-nav" id="bh-nav" aria-label="主导航">
+        <a href="#bh-home">首页</a>
+        <a href="#bh-focus">焦点影像</a>
+        <a href="#bh-about">品牌解析</a>
+        <a href="#bh-flow">内容社区</a>
+        <a href="#bh-creators">创作者</a>
+        <a href="#bh-news">企业动态</a>
+        <a href="#bh-faq">帮助</a>
+        <a href="#bh-contact">联系</a>
+      </nav>
+      <div class="bh-head-tools">
+        <div class="bh-search">
+          <input id="bh-search-input" type="search" placeholder="搜索影片、专题或创作者" aria-label="站内搜索">
+          <button class="bh-search-btn" id="bh-search-btn" type="button" aria-label="搜索">⌕</button>
+          <div class="bh-search-feedback" id="bh-search-feedback"></div>
+        </div>
+        <button class="bh-btn-ghost" id="bh-submit-top" type="button">投稿入口</button>
+        <button class="bh-burger" id="bh-burger" type="button" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="bh-home">
+
+  <!-- 首屏 -->
+  <section class="bh-hero">
+    <div class="bh-wrap bh-hero-grid">
+      <div>
+        <span class="bh-kicker"><i></i>官方网站 · 企业级原创视频品牌</span>
+        <h1>白虎<span>影像</span></h1>
+        <p class="bh-hero-lead">以虎为名，取<b>真实、克制、有力</b>之影像态度，深耕东方美学与人间故事。</p>
+        <p class="bh-hero-desc">
+          白虎是一家专注原创纪录与人文叙事的视频品牌企业，持续运营山野、城市与手艺三条内容线。我们以高清品质与正版授权为底线，为创作者搭建值得信赖的内容生态，让每一次按下录制键都成为一次郑重的表达。
+        </p>
+        <div class="bh-hero-actions">
+          <a class="bh-btn bh-btn-primary" href="#bh-focus">进入焦点影像 →</a>
+          <a class="bh-btn bh-btn-line" href="#bh-about">了解品牌故事</a>
+          <button class="bh-btn bh-btn-line" id="bh-submit-hero" type="button">成为创作者</button>
+        </div>
+        <div class="bh-hero-stats">
+          <div><strong data-bh-count="1680">0</strong><span>原创精品内容</span></div>
+          <div><strong data-bh-count="320">0</strong><span>签约创作者</span></div>
+          <div><strong data-bh-count="62">0</strong><span>覆盖城市与地区</span></div>
+        </div>
+      </div>
+      <div class="bh-hero-visual">
+        <div class="bh-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23223046'/%3E%3Cstop offset='.55' stop-color='%23384a63'/%3E%3Cstop offset='1' stop-color='%23d9a86a'/%3E%3C/linearGradient%3E%3ClinearGradient id='mt' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23262f42'/%3E%3Cstop offset='1' stop-color='%23171d29'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23sky)'/%3E%3Ccircle cx='615' cy='168' r='52' fill='%23ffd9a0' opacity='.85'/%3E%3Cpath d='M0 400 L150 250 L270 350 L390 210 L520 360 L650 270 L800 380 L800 550 L0 550 Z' fill='url(%23mt)'/%3E%3Cpath d='M0 470 L120 400 L240 460 L380 380 L520 470 L660 400 L800 460 L800 550 L0 550 Z' fill='%2312191f' opacity='.9'/%3E%3Cpath d='M300 550 L360 430 L420 550 Z' fill='%23e2b070' opacity='.28'/%3E%3Cg opacity='.9'%3E%3Cpath d='M560 340c14-8 24-6 30 0 8-8 20-8 28 0' stroke='%23ffe6c2' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E" alt="白虎品牌首屏主视觉：暮色山脊与远处暖阳">
+        </div>
+        <div class="bh-hero-badge">
+          <strong>山影计划 · 第五季</strong>
+          <em>正在制作中</em> · 预计 12 月官方发布
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌深度解析 -->
+  <section class="bh-sec" id="bh-about">
+    <div class="bh-wrap bh-about-grid">
+      <div class="bh-about-art">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 620'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d2534'/%3E%3Cstop offset='1' stop-color='%23313b4d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='620' fill='url(%23bg2)'/%3E%3Cg stroke='%23ffb347' stroke-width='3' fill='none' opacity='.85'%3E%3Cpath d='M120 210c26 0 34 18 34 36v90c0-20 14-30 66-30s66 10 66 30v-90c0-18 8-36 34-36' stroke-linecap='round'/%3E%3Ccircle cx='178' cy='262' r='13'/%3E%3Ccircle cx='300' cy='262' r='13'/%3E%3Cpath d='M206 322h66' stroke='%234fd6c4' stroke-width='4' stroke-linecap='round'/%3E%3C/g%3E%3Cg fill='%23ffb347' opacity='.16'%3E%3Ccircle cx='95' cy='520' r='70'/%3E%3Ccircle cx='400' cy='130' r='90'/%3E%3C/g%3E%3Cpath d='M0 480 L110 400 L210 470 L320 390 L430 468 L500 420 L500 620 L0 620 Z' fill='%2313191f'/%3E%3C/svg%3E" alt="白虎品牌图形标识：暗色底上的虎面线条与山形剪影">
+      </div>
+      <div class="bh-about-txt">
+        <h2>白虎是谁：一家把纪录片当作产品来做的视频品牌</h2>
+        <p>
+          白虎成立于 2019 年，是一家以原创视频为核心业务的内容企业。我们把品牌名取自东方传说中象征力量与守护的白虎，不是要张扬，而是提醒自己：镜头要有分量，讲述要有底线。六年来，白虎从一个三人小组，成长为拥有 320 位签约创作者、覆盖 62 座城市与地区的视频品牌平台，累计产出 1680 部高清正版作品。
+        </p>
+        <p>
+          作为白虎官方网站，这里既是我们对外展示精品内容的窗口，也是创作者彼此相遇的地方。我们坚持「先做人，后做片」的行业信条，每一条内容上线前都要经过选题会、初剪评审与事实核对三道流程。这份看起来有些笨拙的坚持，构成了白虎口碑的底色。
+        </p>
+        <h3>三条内容主线，一条共同标准</h3>
+        <p>
+          白虎的内容生态分为三条线索。<b>山野线</b>关注自然与地理，代表系列是《山影》；<b>城市线</b>关注人与空间的互动，代表系列是《一城一虎》；<b>手艺线</b>关注那些正在消失的日常技艺，代表系列是《手上的时间》。三条线题材不同，但共用同一套品质标准：真实场景、真实人物、不摆拍、不虚构冲突。
+        </p>
+        <div class="bh-quote">
+          「我们不追逐热搜的那三分钟，我们更在意三年之后，还有人愿意把这条片子重新看一遍。」——白虎内容委员会
+        </div>
+        <h3>关键词定位与深入解析</h3>
+        <p>
+          在中文语境里，「白虎」是一个含义层次很丰富的词。它既是星象中的方位之神，也是民间叙事里带有敬畏感的存在，同时还是自然世界中真实存在的珍稀动物。白虎作为一个视频品牌名，同时承载了这三重意味：方位感，意味着我们始终清楚自己在内容行业里的位置；敬畏感，意味着我们对拍摄对象保持克制与尊重；真实感，意味着我们拒绝把自然与人情做成廉价的奇观。
+        </p>
+        <p>
+          围绕这一命名，白虎建立了自己的内容方法论。第一层是<b>在场</b>：所有选题必须有人真正抵达现场，山要爬到、人要见到、手要摸到，这是白虎区别于二次剪辑型平台的根本。第二层是<b>克制</b>：我们规定每部短片不得使用煽情配乐强行引导情绪，解说词不得替观众下判断。第三层是<b>留存</b>：白虎的每一部作品都要经过五年回看测试，如果五年后它只是过时的热点，那它就不值得占用服务器的空间。
+        </p>
+        <p>
+          这套方法论也决定了白虎的商业选择。我们拒绝过不少高预算但要求摆拍的委托，也主动做过一些没有任何商业回报的冷门题材。企业要活下去，但品牌要活得久，这两件事在白虎内部从来不是对立的。正因为如此，白虎才得以在行业里积累起「值得信赖」四个字，并且持续运营至今。
+        </p>
+        <p>
+          对普通观众而言，白虎是一个可以安静看完一条二十分钟纪录片的平台；对创作者而言，白虎是一个愿意为认真买单的甲方；对合作企业而言，白虎是一个能把品牌故事讲得不油腻的内容伙伴。这三种身份，共同构成了白虎这个视频品牌的完整定义。
+        </p>
+        <div class="bh-mini-grid">
+          <div class="bh-mini"><strong>2019</strong>品牌创立，首部短片《渡口》上线</div>
+          <div class="bh-mini"><strong>3 条</strong>山野 / 城市 / 手艺内容主线</div>
+          <div class="bh-mini"><strong>三道</strong>选题、初剪、事实核对评审流程</div>
+          <div class="bh-mini"><strong>五年</strong>作品回看测试标准</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点影像 -->
+  <section class="bh-sec" id="bh-focus">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>焦点影像：本周官方推荐</h2>
+          <p>由白虎内容委员会选出的重点作品，涵盖山野纪录、城市观察与手艺访谈，每一条都经过完整评审流程。</p>
+        </div>
+        <a class="bh-sec-more" href="#bh-flow">查看全部内容</a>
+      </div>
+
+      <div class="bh-focus-grid">
+        <article class="bh-card bh-focus-main">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233a4a5e'/%3E%3Cstop offset='.6' stop-color='%23222c3c'/%3E%3Cstop offset='1' stop-color='%23141a24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23g1)'/%3E%3Cpath d='M0 320 L130 220 L240 300 L370 190 L500 310 L640 230 L800 320 L800 450 L0 450 Z' fill='%23121a22'/%3E%3Cpath d='M0 380 L150 320 L300 390 L470 310 L640 400 L800 340 L800 450 L0 450 Z' fill='%230d1219'/%3E%3Cg stroke='%23cfe3f0' stroke-width='2' fill='none' opacity='.5'%3E%3Cpath d='M120 140c30-18 60-18 90 0'/%3E%3Cpath d='M560 110c26-14 52-14 78 0'/%3E%3C/g%3E%3Ccircle cx='680' cy='92' r='30' fill='%23ffd9a0' opacity='.7'/%3E%3C/svg%3E" alt="焦点影像《雪线之下》封面：雪山脊线与薄雾">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-focus-body">
+            <div class="bh-tags">
+              <span class="bh-tag">山影系列</span>
+              <span class="bh-tag teal">官方发布</span>
+              <span class="bh-tag">高清</span>
+            </div>
+            <h3>雪线之下：在海拔四千米处，记录一场没有观众的巡山</h3>
+            <p>跟随三位巡护员在山脊上行走六天，镜头没有旁白，只有风、雪、呼吸和脚步。白虎用最朴素的拍法，试图回答一个问题：守护这件事，究竟是怎样一天一天发生的。</p>
+            <div class="bh-card-meta">
+              <span>导演 沈行舟</span><span class="bh-dot"></span>
+              <span>28:14</span><span class="bh-dot"></span>
+              <span>2026-11-19</span><span class="bh-dot"></span>
+              <span>12.8 万次播放</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="bh-focus-side">
+          <article class="bh-card">
+            <div class="bh-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='c2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8b26a'/%3E%3Cstop offset='1' stop-color='%238a5a2e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23c2)'/%3E%3Crect x='60' y='120' width='360' height='30' rx='4' fill='%23f7e3c4' opacity='.7'/%3E%3Crect x='60' y='180' width='250' height='16' rx='4' fill='%23fff' opacity='.45'/%3E%3Ccircle cx='380' cy='90' r='34' fill='%23fff1d8' opacity='.8'/%3E%3Cpath d='M0 300 L120 250 L240 300 L360 250 L480 300 L480 360 L0 360 Z' fill='%235f3d1f' opacity='.6'/%3E%3C/svg%3E" alt="内容《灯下三十道工序》封面：手作工坊的暖色桌台">
+              <span class="bh-play" aria-hidden="true"></span>
+            </div>
+            <div class="bh-focus-side-body">
+              <h4>灯下三十道工序：一把木梳的完整诞生</h4>
+              <p>手上的时间 · 16:40</p>
+            </div>
+          </article>
+          <article class="bh-card">
+            <div class="bh-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='c3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a4a5e'/%3E%3Cstop offset='1' stop-color='%23142032'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23c3)'/%3E%3Cg fill='%234fd6c4' opacity='.8'%3E%3Crect x='40' y='230' width='40' height='90'/%3E%3Crect x='100' y='190' width='40' height='130'/%3E%3Crect x='160' y='250' width='40' height='70'/%3E%3Crect x='220' y='160' width='40' height='160'/%3E%3Crect x='280' y='210' width='40' height='110'/%3E%3Crect x='340' y='240' width='40' height='80'/%3E%3C/g%3E%3Cg fill='%23ffb347' opacity='.5'%3E%3Ccircle cx='70' cy='90' r='3'/%3E%3Ccircle cx='180' cy='60' r='3'/%3E%3Ccircle cx='300' cy='100' r='3'/%3E%3Ccircle cx='410' cy='70' r='3'/%3E%3C/g%3E%3C/svg%3E" alt="内容《凌晨四点的水产市场》封面：夜色中的城市轮廓">
+              <span class="bh-play" aria-hidden="true"></span>
+            </div>
+            <div class="bh-focus-side-body">
+              <h4>凌晨四点的水产市场，是一座城市的开场白</h4>
+              <p>一城一虎 · 21:06</p>
+            </div>
+          </article>
+          <article class="bh-card">
+            <div class="bh-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='c4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b4a7a'/%3E%3Cstop offset='1' stop-color='%23231c34'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23c4)'/%3E%3Cpath d='M240 60 L280 150 L380 150 L300 205 L330 300 L240 245 L150 300 L180 205 L100 150 L200 150 Z' fill='%23ffb347' opacity='.55'/%3E%3Ccircle cx='240' cy='190' r='120' fill='none' stroke='%234fd6c4' stroke-width='2' opacity='.5'/%3E%3C/svg%3E" alt="内容《一个人的星空课堂》封面：紫蓝色夜空与星形图案">
+              <span class="bh-play" aria-hidden="true"></span>
+            </div>
+            <div class="bh-focus-side-body">
+              <h4>一个人的星空课堂：乡村教师在屋顶讲了七年天文</h4>
+              <p>人物访谈 · 18:52</p>
+            </div>
+          </article>
+          <article class="bh-card">
+            <div class="bh-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='c5' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2337624f'/%3E%3Cstop offset='1' stop-color='%23141f19'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23c5)'/%3E%3Cpath d='M0 260c80-60 140-20 210-70s160-40 270 20v150H0Z' fill='%23234a3a'/%3E%3Cpath d='M0 300c100-40 160 10 240-30s150-10 240 30v60H0Z' fill='%23132b21'/%3E%3Cg stroke='%23b8e6c9' stroke-width='3' fill='none' opacity='.6'%3E%3Cpath d='M90 120c0-30 20-50 40-50s40 20 40 50'/%3E%3C/g%3E%3C/svg%3E" alt="内容《茶园里的第七年》封面：层叠绿色茶垄">
+              <span class="bh-play" aria-hidden="true"></span>
+            </div>
+            <div class="bh-focus-side-body">
+              <h4>茶园里的第七年，他等来了一场迟到的春雪</h4>
+              <p>山影系列 · 24:30</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频流 -->
+  <section class="bh-sec" id="bh-flow">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>内容社区：正在被反复打开的片子</h2>
+          <p>按题材浏览白虎的原创精品内容。每一条都标注了作者与时长，你可以先挑一个感兴趣的标签。</p>
+        </div>
+      </div>
+
+      <div class="bh-filter" id="bh-filter" role="group" aria-label="题材筛选">
+        <button class="bh-chip active" data-bh-cat="all" type="button">全部</button>
+        <button class="bh-chip" data-bh-cat="山野" type="button">山野纪录</button>
+        <button class="bh-chip" data-bh-cat="城市" type="button">城市观察</button>
+        <button class="bh-chip" data-bh-cat="手艺" type="button">手艺访谈</button>
+        <button class="bh-chip" data-bh-cat="人物" type="button">人物故事</button>
+      </div>
+
+      <div class="bh-flow" id="bh-flow-grid">
+        <article class="bh-card" data-bh-cat="山野">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232d4a5c'/%3E%3Cstop offset='1' stop-color='%23c9905a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v1)'/%3E%3Cpath d='M0 200 L90 140 L170 190 L260 120 L350 195 L440 145 L480 180 L480 270 L0 270Z' fill='%23141d25'/%3E%3Ccircle cx='390' cy='60' r='26' fill='%23ffe1b0' opacity='.8'/%3E%3C/svg%3E" alt="视频《渡口最后一班船》封面：黄昏江面与远山">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag">山野纪录</span></div>
+            <h3>渡口最后一班船</h3>
+            <p>老船工开了三十八年摆渡，他说这条河的水位一年比一年低。片子拍于他退休前的最后一个班次。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>1842</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bh-card" data-bh-cat="城市">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23222a38'/%3E%3Cstop offset='1' stop-color='%233d4a63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v2)'/%3E%3Cg fill='%23ffb347' opacity='.75'%3E%3Crect x='40' y='130' width='34' height='70'/%3E%3Crect x='90' y='100' width='34' height='100'/%3E%3Crect x='140' y='150' width='34' height='50'/%3E%3Crect x='250' y='90' width='34' height='110'/%3E%3Crect x='300' y='140' width='34' height='60'/%3E%3Crect x='350' y='110' width='34' height='90'/%3E%3C/g%3E%3Crect y='220' width='480' height='50' fill='%23111822'/%3E%3C/svg%3E" alt="视频《凌晨四点的水产市场》封面：夜色中的城市街灯">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag teal">城市观察</span></div>
+            <h3>凌晨四点的水产市场</h3>
+            <p>三点五十到六点，一个市场完成了从寂静到喧嚣的全部过程。我们用一镜到底记录下这个城市的开场白。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>2316</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bh-card" data-bh-cat="手艺">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e0b070'/%3E%3Cstop offset='1' stop-color='%237a4f28'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v3)'/%3E%3Cg stroke='%23fff3dd' stroke-width='4' fill='none' opacity='.8'%3E%3Ccircle cx='240' cy='130' r='54'/%3E%3Ccircle cx='240' cy='130' r='28'/%3E%3C/g%3E%3Cpath d='M0 220 L120 190 L240 220 L360 190 L480 220 L480 270 L0 270Z' fill='%235a3817' opacity='.7'/%3E%3C/svg%3E" alt="视频《灯下三十道工序》封面：暖色工坊与圆形木料">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag">手艺访谈</span></div>
+            <h3>灯下三十道工序</h3>
+            <p>一把木梳从选料到打磨，需要经过三十道工序。老师傅说，最难的不是做，是等木料慢慢干透的那两年。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>1265</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bh-card" data-bh-cat="人物">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b2f57'/%3E%3Cstop offset='1' stop-color='%231a1428'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v4)'/%3E%3Cg fill='%23ffd9a0' opacity='.85'%3E%3Ccircle cx='120' cy='70' r='2.6'/%3E%3Ccircle cx='210' cy='45' r='2.2'/%3E%3Ccircle cx='300' cy='90' r='2.8'/%3E%3Ccircle cx='380' cy='55' r='2.2'/%3E%3Ccircle cx='430' cy='110' r='2.6'/%3E%3Ccircle cx='70' cy='140' r='2'/%3E%3C/g%3E%3Cpath d='M0 230 L100 200 L200 235 L320 195 L420 230 L480 205 L480 270 L0 270Z' fill='%230f0c18'/%3E%3C/svg%3E" alt="视频《一个人的星空课堂》封面：乡村屋顶上的深紫夜空">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag teal">人物故事</span></div>
+            <h3>一个人的星空课堂</h3>
+            <p>一所乡村小学的天文课，只有七个学生。老师用七年时间，把屋顶变成了一座没有天花板的教室。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>3079</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bh-card" data-bh-cat="山野">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v5' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23204b3a'/%3E%3Cstop offset='1' stop-color='%23101d18'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v5)'/%3E%3Cpath d='M0 210c60-50 120-20 180-60s120-30 180 10 120 30 120 30v80H0Z' fill='%232a5c46'/%3E%3Cpath d='M0 240c80-30 140 10 220-20s160 10 260 20v30H0Z' fill='%23132b21'/%3E%3C/svg%3E" alt="视频《茶园里的第七年》封面：晨雾中的绿色茶园">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag">山野纪录</span></div>
+            <h3>茶园里的第七年</h3>
+            <p>一位返乡青年用七年时间修复荒废茶山。片子记录了他第一场真正意义上的春茶采摘。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>978</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bh-card" data-bh-cat="城市">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v6' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23545e78'/%3E%3Cstop offset='1' stop-color='%23202433'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v6)'/%3E%3Cg stroke='%23d8e2f0' stroke-width='2.4' fill='none' opacity='.65'%3E%3Cpath d='M60 200 V120 h60 V80'/%3E%3Cpath d='M180 210 V100 h70 V60'/%3E%3Cpath d='M320 200 V110 h70 V70'/%3E%3C/g%3E%3Crect x='60' y='200' width='60' height='10' fill='%23ffb347'/%3E%3Crect x='180' y='210' width='70' height='10' fill='%23ffb347'/%3E%3Crect x='320' y='200' width='70' height='10' fill='%23ffb347'/%3E%3C/svg%3E" alt="视频《老楼里的电梯阿姨》封面：灰色楼体与楼层线条">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag teal">城市观察</span></div>
+            <h3>老楼里的电梯阿姨</h3>
+            <p>一栋建于 1987 年的老楼，一位开了十九年电梯的阿姨。她能记住每一户人家的作息。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>1560</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bh-card" data-bh-cat="手艺">
+          <div class="bh-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v7' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236e3f52'/%3E%3Cstop offset='1' stop-color='%23231620'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v7)'/%3E%3Cg fill='%23f0c9a0' opacity='.7'%3E%3Ccircle cx='150' cy='130' r='42'/%3E%3Ccircle cx='330' cy='130' r='42'/%3E%3C/g%3E%3Cg stroke='%23ffb347' stroke-width='3' fill='none'%3E%3Cpath d='M192 130h96'/%3E%3C/g%3E%3C/svg%3E" alt="视频《一对银镯的两次告别》封面：深红背景与圆形银器">
+            <span class="bh-play" aria-hidden="true"></span>
+          </div>
+          <div class="bh-flow-body">
+            <div class="bh-tags"><span class="bh-tag">手艺访谈</span></div>
+            <h3>一对银镯的两次告别</h3>
+            <p>银匠为女儿打了一对镯子，一次是在她出生时，一次是在她出嫁前。同一个人，两副手。</p>
+            <div class="bh-actions">
+              <button class="bh-act" data-bh-like type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M7 22V10l5-8 1 1v6h6a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7z"/></svg>
+                <span data-bh-like-num>2104</span>
+              </button>
+              <button class="bh-act" data-bh-fav type="button" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg>
+              </button>
+              <button class="bh-act bh-share" data-bh-share type="button" aria-label="分享">分享</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="bh-sec">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>专题企划：长期主义的三条线</h2>
+          <p>白虎不追热点，我们更愿意花几个月甚至几年，把一个题目做深、做透。以下是正在进行中的三个长期企划。</p>
+        </div>
+      </div>
+      <div class="bh-special">
+        <a class="bh-special-card" href="#bh-contact">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233d5670'/%3E%3Cstop offset='1' stop-color='%23161f2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='320' fill='url(%23s1)'/%3E%3Cpath d='M0 230 L80 160 L150 210 L230 130 L310 200 L400 150 L400 320 L0 320Z' fill='%23101a22'/%3E%3Ccircle cx='310' cy='80' r='28' fill='%23ffd9a0' opacity='.75'/%3E%3C/svg%3E" alt="专题《山影计划》封面：群山与落日">
+          <div class="bh-special-body">
+            <span class="bh-state">更新至第 4 集</span>
+            <h3>山影计划</h3>
+            <p>五年时间，走完十二座山脉。记录那些长期住在山里的人，如何在季节轮转中安排自己的生活。</p>
+          </div>
+        </a>
+        <a class="bh-special-card" href="#bh-contact">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320'%3E%3Cdefs%3E%3ClinearGradient id='s2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a3348'/%3E%3Cstop offset='1' stop-color='%23141b26'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='320' fill='url(%23s2)'/%3E%3Cg fill='%234fd6c4' opacity='.6'%3E%3Crect x='50' y='170' width='30' height='110'/%3E%3Crect x='100' y='140' width='30' height='140'/%3E%3Crect x='150' y='190' width='30' height='90'/%3E%3Crect x='230' y='120' width='30' height='160'/%3E%3Crect x='280' y='160' width='30' height='120'/%3E%3Crect x='330' y='185' width='30' height='95'/%3E%3C/g%3E%3C/svg%3E" alt="专题《一城一虎》封面：城市天际线与青色灯光">
+          <div class="bh-special-body">
+            <span class="bh-state">报名进行中</span>
+            <h3>一城一虎</h3>
+            <p>每座城市选一位本地创作者，用三十天拍一条属于自己城市的片子。目前已覆盖 21 座城市。</p>
+          </div>
+        </a>
+        <a class="bh-special-card" href="#bh-contact">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320'%3E%3Cdefs%3E%3ClinearGradient id='s3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c08a4e'/%3E%3Cstop offset='1' stop-color='%23512e14'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='320' fill='url(%23s3)'/%3E%3Cg stroke='%23fff0d6' stroke-width='4' fill='none' opacity='.75'%3E%3Crect x='130' y='90' width='140' height='140' rx='12'/%3E%3Cpath d='M170 90v-30h60v30'/%3E%3C/g%3E%3C/svg%3E" alt="专题《手上的时间》封面：暖褐色工坊与方形木盒">
+          <div class="bh-special-body">
+            <span class="bh-state">已完结 18 集</span>
+            <h3>手上的时间</h3>
+            <p>十八位手艺人，十八种正在变少的动作。白虎用最慢的镜头，替这些动作留下一份高清档案。</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="bh-sec" id="bh-creators">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>创作者矩阵：白虎签下了谁</h2>
+          <p>白虎的每一位签约创作者都经过至少三个月的合作观察期。我们看重的不只是技术，更是对拍摄对象的态度。</p>
+        </div>
+        <a class="bh-sec-more" href="#bh-contact">申请入驻</a>
+      </div>
+      <div class="bh-creators">
+        <div class="bh-creator">
+          <div class="bh-avatar" style="background:linear-gradient(140deg,#ffb347,#ff7a45)"><span>沈</span></div>
+          <h3>沈行舟</h3>
+          <div class="bh-field">山野纪录 / 导演</div>
+          <p>六年山野拍摄经验，擅长长镜头与自然光。白虎《山影》系列总导演。</p>
+          <div class="bh-creator-data"><div><b>86</b>作品</div><div><b>24.6万</b>关注</div></div>
+          <button class="bh-creator-btn" data-bh-creator="沈行舟|山野纪录导演，白虎《山影》系列总导演，六年山野拍摄经验，主张不打扰的拍摄方式。" type="button">查看档案</button>
+        </div>
+        <div class="bh-creator">
+          <div class="bh-avatar" style="background:linear-gradient(140deg,#4fd6c4,#2c8f9c)"><span>林</span></div>
+          <h3>林在野</h3>
+          <div class="bh-field">城市观察 / 摄影指导</div>
+          <p>长期拍城市夜戏与街巷生活，个人项目《深夜站台》已更新四十期。</p>
+          <div class="bh-creator-data"><div><b>112</b>作品</div><div><b>31.2万</b>关注</div></div>
+          <button class="bh-creator-btn" data-bh-creator="林在野|城市观察摄影指导，长期记录夜晚的城市与街巷，个人项目《深夜站台》已更新四十期。" type="button">查看档案</button>
+        </div>
+        <div class="bh-creator">
+          <div class="bh-avatar" style="background:linear-gradient(140deg,#e0a86a,#9c5a2b)"><span>周</span></div>
+          <h3>周砚山</h3>
+          <div class="bh-field">手艺访谈 / 出镜主持</div>
+          <p>前纪录片编辑，现专注于手艺与器物题材。<b>擅长把对话放到动作里</b>。</p>
+          <div class="bh-creator-data"><div><b>64</b>作品</div><div><b>18.4万</b>关注</div></div>
+          <button class="bh-creator-btn" data-bh-creator="周砚山|手艺访谈主持，前纪录片编辑，专注器物与手艺人题材，擅长把对话放进具体的动作里完成。" type="button">查看档案</button>
+        </div>
+        <div class="bh-creator">
+          <div class="bh-avatar" style="background:linear-gradient(140deg,#9f8cd8,#5b4a9e)"><span>苏</span></div>
+          <h3>苏未晚</h3>
+          <div class="bh-field">人物故事 / 剪辑</div>
+          <p>擅长用剪辑保留沉默的余量。白虎多部人物访谈的剪辑者为她担纲。</p>
+          <div class="bh-creator-data"><div><b>48</b>作品</div><div><b>12.7万</b>关注</div></div>
+          <button class="bh-creator-btn" data-bh-creator="苏未晚|人物故事剪辑，主张剪辑应当为沉默保留空间，白虎多部访谈作品的剪辑者。" type="button">查看档案</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="bh-sec">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>社区声音：来自观众与创作者的反馈</h2>
+          <p>这些评价来自白虎社区的日常留言。我们保留不同意见，因为口碑不是靠删帖堆出来的。</p>
+        </div>
+      </div>
+      <div class="bh-voices">
+        <div class="bh-voice">
+          <div class="bh-voice-top">
+            <div class="bh-voice-av" style="background:linear-gradient(140deg,#ffb347,#ff7a45)">陈</div>
+            <div><strong>陈默的沙发</strong><small>观众 · 关注白虎 3 年</small></div>
+          </div>
+          <div class="bh-stars">★★★★★</div>
+          <p>《雪线之下》我是分三次看完的，不是看不下去，是中间得停下来缓一缓。现在还能有平台愿意给这种片子 28 分钟，挺难得的。</p>
+        </div>
+        <div class="bh-voice">
+          <div class="bh-voice-top">
+            <div class="bh-voice-av" style="background:linear-gradient(140deg,#4fd6c4,#2c8f9c)">许</div>
+            <div><strong>许晚风</strong><small>签约创作者 · 城市线</small></div>
+          </div>
+          <div class="bh-stars">★★★★★</div>
+          <p>第一次交片被退回来的时候挺不服气，后来改到第三版才明白他们为什么要事实核对。这种要求对创作者是保护。</p>
+        </div>
+        <div class="bh-voice">
+          <div class="bh-voice-top">
+            <div class="bh-voice-av" style="background:linear-gradient(140deg,#9f8cd8,#5b4a9e)">阿</div>
+            <div><strong>阿桃不加班</strong><small>观众 · 关注白虎 1 年</small></div>
+          </div>
+          <div class="bh-stars">★★★★☆</div>
+          <p>内容是真不错，就是更新有点慢。不过想想慢工出细活，也就接受了。希望多出点十到十五分钟的中等长度。</p>
+        </div>
+        <div class="bh-voice">
+          <div class="bh-voice-top">
+            <div class="bh-voice-av" style="background:linear-gradient(140deg,#e0a86a,#9c5a2b)">木</div>
+            <div><strong>木匠老周的儿子</strong><small>观众 · 手艺人亲属</small></div>
+          </div>
+          <div class="bh-stars">★★★★★</div>
+          <p>我爸就是做木梳的，看完《灯下三十道工序》他一句话没说，第二天把片子转给了所有同行。谢谢你们没有把它拍成煽情的东西。</p>
+        </div>
+        <div class="bh-voice">
+          <div class="bh-voice-top">
+            <div class="bh-voice-av" style="background:linear-gradient(140deg,#7ea8f0,#3a5fa8)">地</div>
+            <div><strong>地图上没有的地方</strong><small>观众 · 旅行爱好者</small></div>
+          </div>
+          <div class="bh-stars">★★★★★</div>
+          <p>白虎的片子有个好处，看完不会立刻想买机票，而是想安静坐一会儿。这个差别挺重要的。</p>
+        </div>
+        <div class="bh-voice">
+          <div class="bh-voice-top">
+            <div class="bh-voice-av" style="background:linear-gradient(140deg,#b5d86a,#6b8f2e)">林</div>
+            <div><strong>林间小课堂</strong><small>合作机构 · 教育方向</small></div>
+          </div>
+          <div class="bh-stars">★★★★★</div>
+          <p>我们采购了白虎的自然类内容用于课堂教学，授权流程清晰，画质稳定，是值得信赖的合作方。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="bh-sec" id="bh-news">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>企业动态与内容更新</h2>
+          <p>白虎的官方发布、扶持计划与线下活动都会在这里同步，每条动态都标注了具体日期。</p>
+        </div>
+      </div>
+      <div class="bh-news">
+        <div class="bh-news-item">
+          <div class="bh-news-date"><b>19</b>2026.11</div>
+          <div>
+            <h3>《山影》第四集《雪线之下》官方发布</h3>
+            <p>本集拍摄历时 19 天，海拔最高处 4310 米，是全系列制作周期最长的一集。</p>
+          </div>
+        </div>
+        <div class="bh-news-item">
+          <div class="bh-news-date"><b>16</b>2026.11</div>
+          <div>
+            <h3>冬季创作者扶持计划开放报名</h3>
+            <p>面向自然与手艺题材创作者，共 60 个名额，提供设备支持、后期资源与保底采购。</p>
+          </div>
+        </div>
+        <div class="bh-news-item">
+          <div class="bh-news-date"><b>12</b>2026.11</div>
+          <div>
+            <h3>白虎影像年鉴 2026 上线</h3>
+            <p>收录本年度 128 部精品内容，按山野、城市、手艺三条线整理成可检索的索引。</p>
+          </div>
+        </div>
+        <div class="bh-news-item">
+          <div class="bh-news-date"><b>08</b>2026.11</div>
+          <div>
+            <h3>「一城一虎」城市探索挑战赛开启投票</h3>
+            <p>21 座城市的投稿已完成初审，社区投票将持续到 11 月底，结果于 12 月官方发布。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bh-sec" id="bh-faq">
+    <div class="bh-wrap">
+      <div class="bh-sec-head">
+        <div class="bh-sec-title">
+          <h2>帮助中心：关于白虎的常见问题</h2>
+          <p>以下问题来自创作者与合作方的真实咨询，如果你还有疑问，可以通过页面底部的联系方式找到我们。</p>
+        </div>
+      </div>
+      <div class="bh-faq">
+        <details open>
+          <summary>白虎是一家什么样的企业？</summary>
+          <p>白虎是一家专注原创纪录与人文叙事的视频品牌企业，成立于 2019 年，自有制作团队与签约创作者网络，业务涵盖自制内容、创作者扶持与品牌内容合作三类。本页为白虎官方网站首页，用于展示我们的内容生态与官方信息。</p>
+        </details>
+        <details>
+          <summary>如何向白虎投稿？需要满足哪些条件？</summary>
+          <p>通过页面顶部的「投稿入口」提交选题与样片即可。基本要求是：真实场景拍摄、不虚构冲突、画质不低于 1080p、素材授权清晰。我们建议先投一个三分钟以内的片段，便于快速判断方向是否契合。</p>
+        </details>
+        <details>
+          <summary>白虎的内容可以在哪些场景使用？</summary>
+          <p>白虎所有公开内容均为正版授权作品。个人学习与分享可直接使用平台分享功能；教学、放映、商业展示等场景需要通过合作联系提出申请，我们会根据用途提供相应的授权方案。</p>
+        </details>
+        <details>
+          <summary>签约创作者与普通投稿有什么区别？</summary>
+          <p>普通投稿适合单次合作，签约创作者则进入白虎的长期扶持体系，可获得选题支持、设备资源、后期协助与稳定的采购机制。签约前有三个月的合作观察期，双方都有选择的权利。</p>
+        </details>
+        <details>
+          <summary>为什么白虎的更新频率不高？</summary>
+          <p>因为我们坚持每部片子都完成现场拍摄与三期评审。一部二十分钟的作品，从立项到上线通常需要两到四个月。我们更愿意把时间花在内容上，而不是花在制造更新频率上。</p>
+        </details>
+        <details>
+          <summary>白虎如何保障内容中的被拍摄者权益？</summary>
+          <p>所有涉及真实人物的内容，均需签署出镜授权；涉及未成年人、医疗与私人生活场景的选题需要额外审核。我们有明确的撤回机制，被拍摄者可在任意时间要求下架相关内容。</p>
+        </details>
+        <details>
+          <summary>企业可以与白虎进行哪些合作？</summary>
+          <p>目前开放三类合作：品牌纪录短片定制、系列内容联合出品、线下放映与分享活动。我们不做摆拍式的宣传片，如果需求是「讲一个真实的故事」，那我们可以聊得更深入一些。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="bh-sec" id="bh-contact">
+    <div class="bh-wrap">
+      <div class="bh-contact">
+        <div>
+          <h2>和白虎一起，把一条片子认真做完</h2>
+          <p>无论你是想投稿的创作者、想合作的企业，还是只想给我们提一条建议的观众，都可以从这里开始。我们会在三个工作日内回复每一条有效来信。</p>
+          <div class="bh-contact-actions">
+            <button class="bh-btn bh-btn-primary" id="bh-submit-contact" type="button">提交投稿 / 合作意向</button>
+            <button class="bh-btn bh-btn-line" data-bh-share type="button">分享白虎官网</button>
+          </div>
+        </div>
+        <div class="bh-contact-info">
+          <div><strong>合作与投稿邮箱</strong>cooperate@baihu-video.cn</div>
+          <div><strong>创作者扶持咨询</strong>creator@baihu-video.cn</div>
+          <div><strong>内容与授权事务</strong>rights@baihu-video.cn</div>
+          <div><strong>办公地址</strong>浙江省杭州市西湖区云栖路 88 号 白虎影像中心 5 层</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bh-footer">
+  <div class="bh-wrap">
+    <div class="bh-footer-grid">
+      <div>
+        <a class="bh-logo" href="#bh-home">
+          <span class="bh-logo-mark">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M10 22c6 0 8 4 8 8v12c0-4 3-6 14-6s14 2 14 6V30c0-4 2-8 8-8" fill="none" stroke="#ffb347" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="23" cy="27" r="3.2" fill="#ffb347"/>
+              <circle cx="41" cy="27" r="3.2" fill="#ffb347"/>
+            </svg>
+          </span>
+          <span class="bh-logo-txt"><strong>白虎</strong><small>BAIHU VIDEO</small></span>
+        </a>
+        <p>白虎官方网站。原创纪录与人文叙事视频品牌，深耕山野、城市与手艺三条内容线，持续运营中，为用户提供高品质、正版的观看与创作体验。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#bh-focus">焦点影像</a></li>
+          <li><a href="#bh-flow">内容社区</a></li>
+          <li><a href="#bh-creators">创作者矩阵</a></li>
+          <li><a href="#bh-about">品牌解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>企业</h4>
+        <ul>
+          <li><a href="#bh-news">企业动态</a></li>
+          <li><a href="#bh-faq">帮助中心</a></li>
+          <li><a href="#bh-contact">合作联系</a></li>
+          <li><a href="#bh-home">回到首页</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#bh-contact">创作者投稿</a></li>
+          <li><a href="#bh-contact">城市挑战赛</a></li>
+          <li><a href="#bh-contact">线下放映</a></li>
+          <li><a href="#bh-contact">授权咨询</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bh-footer-bottom">
+      <span>© 2019–2026 白虎影像（杭州）有限公司 · 版权所有 · 白虎官方网站持续运营中</span>
+      <span>浙ICP备2019000000号 · 广播电视节目制作经营许可证（浙）字第 00000 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="bh-top" id="bh-top" type="button" aria-label="回到顶部">↑</button>
+
+<!-- 弹窗：通用 -->
+<div class="bh-modal" id="bh-modal" role="dialog" aria-modal="true" aria-labelledby="bh-modal-title">
+  <div class="bh-modal-box">
+    <button class="bh-modal-close" id="bh-modal-close" type="button" aria-label="关闭">×</button>
+    <h3 id="bh-modal-title">标题</h3>
+    <p class="bh-modal-sub" id="bh-modal-sub"></p>
+    <div id="bh-modal-body"></div>
+  </div>
+</div>
+
+<div class="bh-toast" id="bh-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端导航 */
+  var burger = document.getElementById('bh-burger');
+  var nav = document.getElementById('bh-nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '×' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 1000){
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* Toast */
+  var toast = document.getElementById('bh-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('bh-search-input');
+  var searchBtn = document.getElementById('bh-search-btn');
+  var feedback = document.getElementById('bh-search-feedback');
+  var searchIndex = ['雪线之下','渡口最后一班船','凌晨四点的水产市场','灯下三十道工序','星空课堂','茶园里的第七年','电梯阿姨','银镯','山影计划','一城一虎','手上的时间','沈行舟','林在野','周砚山'];
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      feedback.innerHTML = '试试输入：<b>山影</b>、<b>手艺</b>、<b>城市</b>，或直接搜索创作者昵称。';
+      feedback.classList.add('show');
+      return;
+    }
+    var hits = searchIndex.filter(function(k){ return k.indexOf(q) > -1; });
+    if(hits.length){
+      feedback.innerHTML = '找到 <b>' + hits.length + '</b> 条相关内容：' + hits.slice(0,4).join('、') + (hits.length > 4 ? ' 等' : '');
+    }else{
+      feedback.innerHTML = '暂未直接匹配「<b>' + q.replace(/[<>&]/g,'') + '</b>」，我们已记录你的搜索，可在内容社区按标签浏览。';
+    }
+    feedback.classList.add('show');
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value.trim()){ feedback.classList.remove('show'); }
+  });
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.bh-search')){ feedback.classList.remove('show'); }
+  });
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('[data-bh-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = btn.querySelector('[data-bh-like-num]');
+      var n = parseInt(numEl.textContent.replace(/[^\d]/g,''),10) || 0;
+      if(btn.classList.contains('liked')){
+        btn.classList.remove('liked');
+        numEl.textContent = String(Math.max(0, n - 1));
+      }else{
+        btn.classList.add('liked');
+        numEl.textContent = String(n + 1);
+        showToast('已点赞，感谢你的支持');
+      }
+    });
+  });
+  document.querySelectorAll('[data-bh-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('faved');
+      showToast(btn.classList.contains('faved') ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* 分享弹窗 */
+  var modal = document.getElementById('bh-modal');
+  var modalTitle = document.getElementById('bh-modal-title');
+  var modalSub = document.getElementById('bh-modal-sub');
+  var modalBody = document.getElementById('bh-modal-body');
+  function openModal(title, sub, html){
+    modalTitle.textContent = title;
+    modalSub.textContent = sub || '';
+    modalBody.innerHTML = html;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('bh-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  document.querySelectorAll('[data-bh-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal('分享白虎官网', '选择你喜欢的方式分享这条内容', ''
+        + '<div class="bh-share-list">'
+        + '<button type="button" data-bh-copy>复制链接</button>'
+        + '<button type="button" data-bh-share-tip="微信">微信</button>'
+        + '<button type="button" data-bh-share-tip="微博">微博</button>'
+        + '<button type="button" data-bh-share-tip="QQ">QQ</button>'
+        + '</div>'
+        + '<div class="bh-modal-actions"><button class="bh-btn bh-btn-line" type="button" data-bh-close>关闭</button></div>');
+    });
+  });
+
+  /* 创作者档案 */
+  document.querySelectorAll('[data-bh-creator]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var parts = btn.getAttribute('data-bh-creator').split('|');
+      openModal(parts[0] + ' · 创作者档案', '白虎签约创作者',
+        '<p style="font-size:13.6px;color:#c2cbda;margin-bottom:18px">' + (parts[1] || '') + '</p>'
+        + '<div class="bh-modal-actions"><button class="bh-btn bh-btn-primary" type="button" data-bh-close>知道了</button></div>');
+    });
+  });
+
+  /* 投稿弹窗 */
+  function openSubmit(){
+    openModal('投稿 / 合作意向', '填写基本信息，我们会在三个工作日内回复', ''
+      + '<form id="bh-submit-form">'
+      + '<div class="bh-form-row"><label for="bh-f-name">称呼</label><input id="bh-f-name" type="text" placeholder="怎么称呼你" required></div>'
+      + '<div class="bh-form-row"><label for="bh-f-mail">联系方式</label><input id="bh-f-mail" type="email" placeholder="邮箱或手机号" required></div>'
+      + '<div class="bh-form-row"><label for="bh-f-type">意向类型</label><input id="bh-f-type" type="text" placeholder="投稿 / 品牌合作 / 授权咨询"></div>'
+      + '<div class="bh-form-row"><label for="bh-f-msg">内容简介</label><textarea id="bh-f-msg" rows="3" placeholder="简单说说你的选题或需求"></textarea></div>'
+      + '<div class="bh-modal-actions"><button class="bh-btn bh-btn-line" type="button" data-bh-close>取消</button><button class="bh-btn bh-btn-primary" type="submit">提交</button></div>'
+      + '</form>');
+  }
+  ['bh-submit-top','bh-submit-hero','bh-submit-contact'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('click', openSubmit);
+  });
+
+  /* 弹窗内事件委托 */
+  modalBody.addEventListener('click', function(e){
+    var t = e.target.closest('button');
+    if(!t) return;
+    if(t.hasAttribute('data-bh-close')){ closeModal(); return; }
+    if(t.hasAttribute('data-bh-copy')){
+      var link = location.href.split('#')[0];
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){ showToast('链接已复制'); }, function(){ showToast('复制失败，请手动复制地址栏'); });
+      }else{
+        showToast('链接已就绪，请手动复制地址栏');
+      }
+      return;
+    }
+    if(t.hasAttribute('data-bh-share-tip')){
+      showToast('已生成分享文案，可在' + t.getAttribute('data-bh-share-tip') + '中粘贴');
+      return;
+    }
+  });
+  modalBody.addEventListener('submit', function(e){
+    e.preventDefault();
+    closeModal();
+    showToast('已收到你的信息，我们会尽快回复');
+  });
+
+  /* 标签筛选 */
+  var chips = document.querySelectorAll('#bh-filter .bh-chip');
+  var cards = document.querySelectorAll('#bh-flow-grid .bh-card');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var cat = chip.getAttribute('data-bh-cat');
+      var count = 0;
+      cards.forEach(function(card){
+        var match = (cat === 'all' || card.getAttribute('data-bh-cat') === cat);
+        card.style.display = match ? '' : 'none';
+        if(match) count++;
+      });
+      showToast('已筛选出 ' + count + ' 条内容');
+    });
+  });
+
+  /* 数字滚动 */
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    document.querySelectorAll('[data-bh-count]').forEach(function(el){
+      var target = parseInt(el.getAttribute('data-bh-count'),10);
+      var start = performance.now();
+      var dur = 1400;
+      function tick(now){
+        var p = Math.min(1,(now - start) / dur);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = String(Math.round(target * ease));
+        if(p < 1) requestAnimationFrame(tick);
+        else el.textContent = String(target);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCounters(); io.disconnect(); } });
+    }, {threshold:.35});
+    var stats = document.querySelector('.bh-hero-stats');
+    if(stats) io.observe(stats);
+  }else{
+    runCounters();
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('bh-top');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
